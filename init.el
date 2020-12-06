@@ -166,7 +166,6 @@
   :config (counsel-projectile-mode))
 
 
-
 ;; Magit
 (use-package magit)
 ;; Evil magit??
