@@ -9,7 +9,7 @@
 (set-fringe-mode 10) ; Buffer padding
 (menu-bar-mode -1)
 
-
+; Font
 (set-face-attribute 'default nil :font "Source Code Pro" :height 150)
 
 
