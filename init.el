@@ -8,6 +8,7 @@
 (tooltip-mode -1)
 (set-fringe-mode 10) ; Buffer padding
 (menu-bar-mode -1)
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 ; Font
 (set-face-attribute 'default nil :font "Source Code Pro" :height 150)
@@ -168,23 +169,23 @@
 
 ;; Magit
 (use-package magit)
-;; Evil magit??
-  
-  ;; :config
-  ;; ;; (general-evil-setup t)
 
-  ;; (general-create-definer rune/leader-keys
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(hydra evil-collection evil general helpful ivy-rich which-key rainbow-delimiters zones use-package nord-theme doom-themes doom-modeline counsel command-log-mode)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+
+;; ORG
+(defun bachir/org-mode-setup()
+  (org-indent-mode))
+
+(use-package org
+  :config
+  (setq org-ellipsis " ▼")
+  (setq org-hide-emphasis-markers t))
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+
+
