@@ -13,11 +13,14 @@
 (set-face-attribute 'default nil :font "Source Code Pro" :height 150)
 
 
+(message "This is anniying 222:") 
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
 			 ("org"   . "https://orgmode.org/elpa/")
 			 ("elpa"  . "https://elpa.gnu.org/packages/")))
 
+
+(message "This is anniying 311:") 
 (package-initialize)
 
 (unless package-archive-contents
@@ -169,7 +172,8 @@
 ;; Magit
 (use-package magit)
 ;; Evil magit??
-  
+ (message "This is anniying 111:") 
+
   ;; :config
   ;; ;; (general-evil-setup t)
 
