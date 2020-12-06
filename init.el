@@ -169,7 +169,7 @@
 
 ;; Magit
 (use-package magit)
-
+;; Evil magit??
   
   ;; :config
   ;; ;; (general-evil-setup t)
